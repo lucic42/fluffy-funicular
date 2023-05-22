@@ -67,11 +67,12 @@ def get_webdriver(req: V1RequestBase = None) -> WebDriver:
 
         if req is not None:
             if req.headless:
+                print("HEADLESS")
                 options.add_argument("--headless")
 
         # note: headless mode is detected (options.headless = True)
         # we launch the browser in head-full mode with the window hidden
-        windows_headless = False
+        windows_headless = True
         if get_config_headless():
             if req is not None and req.headless is True or os.name == 'nt':
                 windows_headless = True
