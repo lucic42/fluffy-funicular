@@ -79,9 +79,9 @@ def get_webdriver(req: V1RequestBase = None) -> WebDriver:
 
                 # Make headless
                 # Add start minimized
-                # options.add_argument('--start-minimized')
-            # else:
-            #     start_xvfb_display()
+                options.add_argument('--start-minimized')
+            else:
+                start_xvfb_display()
 
         # If we are inside the Docker container, we avoid downloading the driver
         driver_exe_path = None
