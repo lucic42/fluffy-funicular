@@ -261,6 +261,8 @@ def _resolve_challenge(req: V1RequestBase, method: str) -> ChallengeResolutionT:
         print('Error solving the challenge. ' + str(e))
         print(f'Traceback: {tb}')
     finally:
+        
+
         if not req.session:
             if driver:
                 driver.quit()

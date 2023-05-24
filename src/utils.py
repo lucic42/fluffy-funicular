@@ -79,7 +79,7 @@ def get_webdriver(req: V1RequestBase = None) -> WebDriver:
 
                 # Make headless
                 # Add start minimized
-                options.add_argument('--start-minimized')
+                # options.add_argument('--start-minimized')
             else:
                 start_xvfb_display()
 
@@ -100,9 +100,9 @@ def get_webdriver(req: V1RequestBase = None) -> WebDriver:
                            windows_headless=windows_headless)
 
         # Temporary fix for headless mode
-        if windows_headless:
-            # Hide the window
-            driver.minimize_window()
+        # if windows_headless:
+        #     # Hide the window
+        #     # driver.minimize_window()
 
         # save the patched driver to avoid re-downloads
         if driver_exe_path is None:
